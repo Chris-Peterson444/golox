@@ -98,7 +98,11 @@ type LoxNumber struct {
 }
 
 func (n LoxNumber) RawPrint() string {
-	return fmt.Sprintf("%v", n.value)
+	if float64(int64(n.value)) == n.value {
+		return fmt.Sprintf("%.1f", n.value)
+	} else {
+		return fmt.Sprintf("%v", n.value)
+	}
 }
 
 type LoxEmptyLiteral struct{}
