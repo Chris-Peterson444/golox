@@ -409,6 +409,9 @@ func main() {
 
 	filename := os.Args[2]
 	RunFile(filename)
+	if hadError {
+		os.Exit(65)
+	}
 	// fileContents, err := os.ReadFile(filename)
 	// if err != nil {
 	// 	fmt.Fprintf(os.Stderr, "Error reading file: %v\n", err)
