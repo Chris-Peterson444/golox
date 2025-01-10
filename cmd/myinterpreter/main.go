@@ -219,7 +219,8 @@ func (scan *Scanner) scanToken() {
 		} else if scan.isAlpha(char) {
 			scan.identifier()
 		} else {
-			LoxError(scan.line, "Unexpected character.")
+			message := fmt.Sprintf("Unexpected character: %c", char)
+			LoxError(scan.line, message)
 		}
 	}
 }
