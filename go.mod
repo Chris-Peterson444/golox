@@ -8,4 +8,8 @@
 
 module github.com/codecrafters-io/interpreter-starter-go
 
-go 1.22
+go 1.22.0
+
+toolchain go1.23.3
+
+require golang.org/x/tools v0.29.0 // indirect
