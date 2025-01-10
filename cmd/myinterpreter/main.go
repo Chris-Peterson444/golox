@@ -90,7 +90,7 @@ type LoxString struct {
 }
 
 func (s LoxString) RawPrint() string {
-	return fmt.Sprintf("%q", s.value)
+	return fmt.Sprintf("%s", s.value)
 }
 
 type LoxNumber struct {
