@@ -185,7 +185,7 @@ func (scan *Scanner) scanToken() {
 		if scan.match('=') {
 			scan.addToken(EQUAL_EQUAL)
 		} else {
-			scan.addToken(EQUAL_EQUAL)
+			scan.addToken(EQUAL)
 		}
 	case '<':
 		if scan.match('=') {
